@@ -8,7 +8,7 @@ function kingKong(n){
             console.log('Kong')
         }else{
             console.log(i)
-        }
+        } 
     }
 }
 kingKong(100);
