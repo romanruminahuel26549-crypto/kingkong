@@ -1,39 +1,24 @@
-const numero = document.getElementById('numero');
-const jugar = document.getElementById('jugar');
-const limpiar = document.getElementById('limpiar');
+let contador=1;
+let texto;
 
-
-function jugar(){
-    const numero = (numero);
-    if (numero [0] !! numero <=0){
-        resultado='';
-        return;
-    }
-    }
-    
-
-let resultado='';
-for(let i=1;i<=numero;i++){
-    if(i%3===0 && i%5===0){
-        resultado += 'kingKong';
-    }else if(i%3===0){
-        resultado += 'King';
-    }else if(i%5===0){
-        resultado += 'Kong'
+function contador (button){
+    contador++;
+    if(contador%3===0 && contador%5===0){
+        texto='kingKong';
+    }else if(contador%3===0){
+        texto='King';
+    }else if(contador%5===0){
+        texto='Kong';
     }else{
-        resultado += i
+        texto=contador;
     }
-    }
-resultado=resultado;
-
-function limpiar(){
-    resultado='';
-    numero=0;
+    document.getElementById('resultado').textContent=texto;
 }
-
-
-
-
+if((texto!==button && button=='num') ||
+((contador%5===0 || contador%3===0) && button=='num')){
+    document.getElementById('resultado').textContent=perdiste;
+    contar=1;
+}
 
 
 

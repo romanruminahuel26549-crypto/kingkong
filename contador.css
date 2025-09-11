@@ -1,5 +1,7 @@
 body{
     font-family: arial, sans-serif;
+    background-image:url(https://cdn.pixabay.com/photo/2022/02/06/14/56/king-kong-6997355_1280.jpg);
+    text-align: center;
 } 
 
 #resultado{
@@ -7,6 +9,10 @@ body{
     border: 1px solid;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: white;
+    text-align: center;
+    
+    
 }
 
 button{
@@ -16,6 +22,12 @@ button{
     border-radius: 5px;
     background-color: #50c054;
     color: white;
-    cursor: pointer;
+    cursor: pointer;  
 }
+
+#h1{
+    color: white;
+    text-align: center;
+}
+
 
