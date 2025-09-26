@@ -1,14 +1,13 @@
-import './App.css'
-import Evento from './Evento.jsx';
 import CardNav from './CardNav.jsx'
 import logo from './assets/esquel.png';
-import { Link, Route, Routes } from 'react-router';
+import { Route, Routes } from 'react-router';
 import Home from './Home.jsx';
 import About from './About.jsx';
 import Contact from './Contact.jsx';
 import Fiestas from './Fiestas.jsx';
 import Alojamiento from './Alojamiento.jsx';
 import Excursiones from './Excursiones.jsx';
+import Inicio from './Inicio.jsx';
 
 const Botones=()=>{
   const botones = [
@@ -68,12 +67,10 @@ export default function App() {
   ];
 
   return (
-    
 
-    
     <div className=' h-screen bg-[url(https://backstrapi.latitur.com/uploads/copy_old_1755575214442_9da72369_996f_4c0e_a794_3a1231a27df1_cf7f61e7a3.webp?w=640&q=75)] bg-cover bg-no-repeat '>
       <CardNav
-      logo={logo}
+      logo={"https://www.entornoturistico.com/wp-content/uploads/2025/08/Logo-del-Dia-Mundial-del-Turismo-2025-en-espanol_HOR.png"}
       logoAlt="Company Logo"
       items={items}
       baseColor="#fff"
@@ -82,9 +79,11 @@ export default function App() {
       buttonTextColor="#fff"
       ease="power3.out"
     />
+   
     <div className='bg-black/50'>
-<div className=' p-20'>
+<div className=' sd:p-20'>
     <Routes>
+  <Route path="/inicio" element={<Inicio />} />
   <Route path="/home" element={<Home />} />
   <Route path="/about" element={<About />} />
   <Route path="/contact" element={<Contact />} />
