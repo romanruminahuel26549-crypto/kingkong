@@ -4,10 +4,12 @@ import { Route, Routes } from 'react-router';
 import Home from './Home.jsx';
 import About from './About.jsx';
 import Contact from './Contact.jsx';
-import Fiestas from './Fiestas.jsx';
+import Organizadores from './Organizadores.jsx';
 import Alojamiento from './Alojamiento.jsx';
 import Excursiones from './Excursiones.jsx';
 import Inicio from './Inicio.jsx';
+import Carousel from './Carousel.jsx';
+
 
 const Botones=()=>{
   const botones = [
@@ -17,7 +19,8 @@ const Botones=()=>{
     { id: 4, texto: 'Contacto' },
     { id: 5, texto: 'Esqui La Hoya' }
   ];
-  
+
+
   return (
     <div className="flex justify-center">
       {botones.map((boton) => (
@@ -31,16 +34,15 @@ const Botones=()=>{
 
 export default function App() {
   
-  
-  const items = [
+  const items = [  
     {
       label: "Inicio",
       bgColor: "#0D0716",
       textColor: "#fff",
       links: [
-        { label: "Conocé", ariaLabel: "Inicio Conocé", link:"/home"},
-        { label: "¿Qué hacer en Esquel?", ariaLabel: "Inicio ¿Qué hacer en Esquel?", link:"/contact"},
-        { label: "Fiestas Locales", ariaLabel: "Fiestas Locales Contacto", link: "/fiestas" }
+        { label: "Conocé", ariaLabel: "Inicio Conocé", link:"/home" },
+        { label: "Actividades: Dia del Turismo", ariaLabel: "Inicio Actividades", link:"/contact"},
+        { label: "Organizadores", ariaLabel: "Organizadores", link:"/organizadores" },
       ]
     },
     {
@@ -50,7 +52,6 @@ export default function App() {
       links: [
         { label: "Alojamiento", ariaLabel: "Alojamiento Planificaciones", link:"/alojamiento" },
         { label: "Excursiones y Aventura", ariaLabel: "Project Excursiones y Aventura", link:"/excursiones" },
-        { label: "Gastronomía", ariaLabel: "Gastronomía Planificaciones" },
       ]
     },
     {
@@ -67,8 +68,7 @@ export default function App() {
   ];
 
   return (
-
-    <div className=' h-screen bg-[url(https://backstrapi.latitur.com/uploads/copy_old_1755575214442_9da72369_996f_4c0e_a794_3a1231a27df1_cf7f61e7a3.webp?w=640&q=75)] bg-cover bg-no-repeat '>
+    <div className=' bg-center bg-[url(https://tripin.travel/wp-content/uploads/2016/07/Laguna-La-Zeta-@juanbalestra-web.jpg)] min-h-max bg-fixed'>
       <CardNav
       logo={"https://www.entornoturistico.com/wp-content/uploads/2025/08/Logo-del-Dia-Mundial-del-Turismo-2025-en-espanol_HOR.png"}
       logoAlt="Company Logo"
@@ -79,20 +79,21 @@ export default function App() {
       buttonTextColor="#fff"
       ease="power3.out"
     />
-   
-    <div className='bg-black/50'>
-<div className=' sd:p-20'>
+    <div className='bg-black/50 min-h-max w-full text-center p-5'>
+    <div className=' sd:p-20'>
     <Routes>
-  <Route path="/inicio" element={<Inicio />} />
+  <Route path="/" element={<Inicio />} />
   <Route path="/home" element={<Home />} />
   <Route path="/about" element={<About />} />
   <Route path="/contact" element={<Contact />} />
-  <Route path="/fiestas" element={<Fiestas />} />
   <Route path="/alojamiento" element={<Alojamiento />} />
+  <Route path="/organizadores" element={<Organizadores />} />
   <Route path="/excursiones" element={<Excursiones />} />
+  <Route path="de vuelta" element={<Inicio />} />
 
 </Routes>
 </div>
+
 
 
       </div>

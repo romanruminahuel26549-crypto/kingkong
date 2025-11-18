@@ -169,9 +169,10 @@ const CardNav = ({
             type="button"
             className="card-nav-cta-button hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-10 h-full font-medium cursor-pointer transition-colors duration-300"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
-            onClick={() => 'DE VUELTA'}
-          >
-            DE VUELTA
+            onClick={() => window.location.href = '/'}
+            >
+            
+            INICIO
           </button>
         </div>
 
